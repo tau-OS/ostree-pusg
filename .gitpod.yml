@@ -1,1 +1,2 @@
-image: fedora:latest
+image:
+  file: .gitpod.Dockerfile
