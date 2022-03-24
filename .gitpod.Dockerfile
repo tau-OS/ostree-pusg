@@ -9,6 +9,8 @@ RUN dnf install -y dnf-plugins-core git-core ostree ostree-devel openssl-devel m
     && dnf clean all \
     && rm -rf /var/cache/yum
 
+USER gitpod
+
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 ENV PATH=/root/.cargo/bin:$PATH
